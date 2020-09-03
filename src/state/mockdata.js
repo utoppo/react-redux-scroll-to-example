@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   uniqueNamesGenerator,
   adjectives,
@@ -26,7 +28,8 @@ const generateAnimal = (index) => {
   return {
     id: index + 1,
     name: generateName(),
-    categoryId: getRandomNumber(1, 3)
+    categoryId: getRandomNumber(1, 3),
+    ref: React.createRef()
   };
 };
 

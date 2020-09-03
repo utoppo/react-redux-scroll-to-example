@@ -69,6 +69,14 @@ const Number = styled.div`
   font-size: 16px;
 `;
 
+const handleClick = (participant) => (e) => {
+  setActiveParticipant(participant.id);
+  participant.ref.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+};
+
 const ParticipantCards = (props) => {
   const { participants, active_category } = props;
 
@@ -77,7 +85,7 @@ const ParticipantCards = (props) => {
       <ListContainer>
         {participants.map((p) => {
           return (
-            <ListItem>
+            <ListItem onClick={handleClick(p)}>
               <Number>{p.id}</Number>
               <Name>{p.name}</Name>
             </ListItem>

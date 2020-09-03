@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { connect } from "react-redux";
 import styled from "@emotion/styled";
 import { setActiveParticipant, filterParticipants } from "../../state/actions";
@@ -72,6 +72,8 @@ const Number = styled.div`
   font-size: 16px;
 `;
 
+// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
 const ParticipantCards = (props) => {
   const { participants, categories, active_category } = props;
 
@@ -83,8 +85,10 @@ const ParticipantCards = (props) => {
       <CardContainer>
         {activeParticipans.map((p) => {
           const category = categories.find((c) => c.id === p.categoryId).name;
+          // const cardRef = useRef(null);
+          //const ref = React.createRef();
           return (
-            <Card>
+            <Card ref={p.ref}>
               <Number>{p.id}</Number>
               <Name>{p.name}</Name>
               <Category>{category}</Category>
