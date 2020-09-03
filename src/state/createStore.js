@@ -12,6 +12,6 @@ function configureStore(preloadedState) {
   return store;
 }
 
-const store = configureStore(initialState);
+const store = configureStore({ all: initialState });
 
 export default store;

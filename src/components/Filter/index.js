@@ -13,7 +13,12 @@ const Filter = (props) => {
     <FilterWrap>
       {categories.map((c) => {
         return (
-          <FilterItem onClick={() => triggerAction(c)}>{c.name}</FilterItem>
+          <FilterItem
+            key={`filter_item_${c.id}`}
+            onClick={() => triggerAction(c)}
+          >
+            {c.name}
+          </FilterItem>
         );
       })}
     </FilterWrap>

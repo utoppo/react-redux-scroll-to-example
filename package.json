@@ -1,11 +1,8 @@
 {
-  "name": "react",
+  "name": "react-redux-scroll-to-item",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "Scroll to specific Item. Trigger Scroll from within another component.",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@emotion/core": "10.0.35",

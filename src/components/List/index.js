@@ -21,7 +21,7 @@ const ParticipantCards = (props) => {
       <ListContainer>
         {activeParticipans.map((p) => {
           return (
-            <ListItem onClick={handleClick(p)}>
+            <ListItem key={`list_item_${p.id}`} onClick={handleClick(p)}>
               <Number>{p.id}</Number>
               <Name>{p.name}</Name>
             </ListItem>

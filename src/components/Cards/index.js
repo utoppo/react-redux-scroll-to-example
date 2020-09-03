@@ -24,7 +24,7 @@ const ParticipantCards = (props) => {
         {activeParticipans.map((p) => {
           const category = categories.find((c) => c.id === p.categoryId).name;
           return (
-            <Card ref={p.ref}>
+            <Card key={`card_item_${p.id}`} ref={p.ref}>
               <Number>{p.id}</Number>
               <Name>{p.name}</Name>
               <Category>{category}</Category>

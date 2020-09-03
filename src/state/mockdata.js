@@ -43,7 +43,8 @@ const initialState = {
   active_category: {
     id: null,
     name: ""
-  }
+  },
+  active_participant_id: null
 };
 
 export { animalCollection as animals, categories, initialState };
