@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import styled from "@emotion/styled";
 import { setActiveParticipant, filterParticipants } from "../../state/actions";
@@ -87,6 +87,7 @@ const ParticipantCards = (props) => {
           const category = categories.find((c) => c.id === p.categoryId).name;
           // const cardRef = useRef(null);
           //const ref = React.createRef();
+
           return (
             <Card ref={p.ref}>
               <Number>{p.id}</Number>
