@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import store from "./state/createStore";
 import Cards from "./components/Cards";
 import Filter from "./components/Filter";
+import List from "./components/List";
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ export default function App() {
       <Wrapper>
         <Filter />
         <Cards />
-        <h2>Start editing to see some magic happen!</h2>
+        <List />
       </Wrapper>
     </Provider>
   );
