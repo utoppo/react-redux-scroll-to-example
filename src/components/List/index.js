@@ -79,11 +79,13 @@ const handleClick = (participant) => (e) => {
 
 const ParticipantCards = (props) => {
   const { participants, active_category } = props;
-
+  const activeParticipans = active_category.id
+    ? participants.filter((p) => p.categoryId === active_category.id)
+    : participants;
   return (
     <ListWrap>
       <ListContainer>
-        {participants.map((p) => {
+        {activeParticipans.map((p) => {
           return (
             <ListItem onClick={handleClick(p)}>
               <Number>{p.id}</Number>
